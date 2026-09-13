@@ -27,6 +27,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
   onShowToast,
 }) => {
   const [activeTab, setActiveTab] = React.useState<'pdf' | 'interactive'>('pdf');
+  const resumePdfUrl = `${import.meta.env.BASE_URL}Aman_Sah_Resume.pdf`;
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -45,12 +46,12 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
   if (!isOpen) return null;
 
   const handlePrint = () => {
-    window.open('/Aman_Sah_Resume.pdf', '_blank');
+    window.open(resumePdfUrl, '_blank');
   };
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Aman_Sah_Resume.pdf';
+    link.href = resumePdfUrl;
     link.download = 'Aman_Sah_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -91,7 +92,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
 
           <div className="flex items-center gap-2">
             <a
-              href="/Aman_Sah_Resume.pdf"
+              href={resumePdfUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={`p-1.5 rounded-lg font-mono text-xs flex items-center gap-1.5 transition-colors border ${
@@ -190,7 +191,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
         {activeTab === 'pdf' ? (
           <div className="p-3 sm:p-5 flex-1 min-h-[500px] h-[68vh] flex flex-col">
             <iframe
-              src="/Aman_Sah_Resume.pdf#view=FitH"
+              src={`${resumePdfUrl}#view=FitH`}
               className="w-full h-full rounded-xl border border-[#262a35] bg-slate-900 shadow-inner"
               title="Aman Sah Resume PDF"
             />
@@ -364,7 +365,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
           }`}
         >
           <a
-            href="/Aman_Sah_Resume.pdf"
+            href={resumePdfUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-xs text-[#4cd7f6] hover:underline flex items-center gap-1"

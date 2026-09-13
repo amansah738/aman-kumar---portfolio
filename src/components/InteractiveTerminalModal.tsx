@@ -132,7 +132,7 @@ export const InteractiveTerminalModal: React.FC<TerminalModalProps> = ({
         response = (
           <div className="font-mono text-xs text-[#4cd7f6] space-y-1">
             <p>Opening curriculum vitae console...</p>
-            <p>Direct download: <a href="/Aman_Sah_Resume.pdf" download="Aman_Sah_Resume.pdf" className="text-[#4edea3] underline font-bold">Aman_Sah_Resume.pdf</a></p>
+            <p>Direct download: <a href={`${import.meta.env.BASE_URL}Aman_Sah_Resume.pdf`} download="Aman_Sah_Resume.pdf" className="text-[#4edea3] underline font-bold">Aman_Sah_Resume.pdf</a></p>
           </div>
         );
         break;

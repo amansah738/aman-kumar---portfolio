@@ -99,7 +99,7 @@ export const ContactQRCodeModal: React.FC<ContactQRCodeModalProps> = ({
           <div className="flex flex-col items-center">
             <div className="relative mb-3">
               <img
-                src="/profile.jpg"
+                src={`${import.meta.env.BASE_URL}profile.jpg`}
                 alt="Aman Sah"
                 className="w-20 h-20 rounded-full object-cover object-top ring-4 ring-[#4edea3]/40 shadow-xl"
               />

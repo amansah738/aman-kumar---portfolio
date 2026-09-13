@@ -1,8 +1,10 @@
 import { ProjectItem, SkillGroup } from '../types';
 
+const BASE = import.meta.env.BASE_URL;
+
 export const ASSETS = {
   logo: 'https://lh3.googleusercontent.com/aida/AEtjO1XCRBqUgy1VQEjmQHUtVdYiP-VfWGO1yfEVZ_9DKMZLmdpZmoJgiPPRyQDYQF8NBYoxYjPMQ59IKKHhgJ1LaK-35NX-hPhfrLeOQh4QSVDcv5EoXMZa0TzjhzuVZ74CWSpmiYtl_WxMH9LcQn6sjEjNDK7hQFDfF_8wi4mL4ZImC0NdnSRkzM_tN9bErAkhCtxR7jjypSE9JkjkBwVMHzWBXcS5ac5k92yvknjzT08V447T_4_beIY6',
-  avatar: '/profile.jpg'
+  avatar: `${BASE}profile.jpg`
 };
 
 export const PERSONAL_INFO = {
@@ -21,10 +23,10 @@ export const PERSONAL_INFO = {
   githubUsername: 'amansah738',
   linkedin: 'https://www.linkedin.com/in/aman-sah01',
   linkedinUser: 'linkedin.com/in/aman-sah01',
-  portfolioUrl: 'https://amansah738.github.io/',
+  portfolioUrl: 'https://amansah738.github.io/aman-kumar---portfolio/',
   availabilityStatus: 'Currently Available',
   availabilityNotice: 'Open for Full-Time, Remote & Internship opportunities worldwide.',
-  resumePdf: '/Aman_Sah_Resume.pdf',
+  resumePdf: `${BASE}Aman_Sah_Resume.pdf`,
   codingProfiles: {
     leetcode: 'https://leetcode.com/u/ak526387/',
     gfg: 'https://www.geeksforgeeks.org/user/aman22scsu84l/',
@@ -140,7 +142,7 @@ export const PROJECTS: ProjectItem[] = [
     demoUrl: 'https://xynox-solutions-demo.vercel.app',
     githubUrl: 'https://github.com/amansah738/xynox-solutions',
     icon: 'Building2',
-    image: '/projects/xynox.jpg',
+    image: `${BASE}projects/xynox.jpg`,
     accentGlow: 'from-[#4cd7f6]/20 to-transparent',
     details: {
       overview: 'Comprehensive digital redesign and web platform for Xynox Solutions engineering agency, delivering 99+ Google Lighthouse performance scores and zero layout shifts.',
@@ -176,7 +178,7 @@ export const PROJECTS: ProjectItem[] = [
     demoUrl: 'https://quantum-shop-demo.vercel.app',
     githubUrl: 'https://github.com/amansah738/ecommerce-secure-store',
     icon: 'ShoppingCart',
-    image: '/projects/ecommerce.jpg',
+    image: `${BASE}projects/ecommerce.jpg`,
     accentGlow: 'from-[#4edea3]/20 to-transparent',
     details: {
       overview: 'Modern high-conversion shopping storefront featuring instant cart state synchronization, optimistic item updates, and cryptographic order hashing.',
@@ -212,7 +214,7 @@ export const PROJECTS: ProjectItem[] = [
     demoUrl: 'https://optical-erp-demo.vercel.app',
     githubUrl: 'https://github.com/amansah738/optical-erp',
     icon: 'Eye',
-    image: '/projects/eyecares.jpg',
+    image: `${BASE}projects/eyecares.jpg`,
     accentGlow: 'from-[#4fdbc8]/20 to-transparent',
     details: {
       overview: 'Internal healthcare and optical dispensary management system built to track patient clinical prescriptions, lens inventory, and point-of-sale invoicing.',
